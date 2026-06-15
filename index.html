@@ -203,6 +203,7 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
   color: var(--heading);
   font-weight: 650;
   text-decoration: none;
@@ -217,10 +218,11 @@ a:focus-visible {
   color: var(--link);
 }
 
-.contact-list span {
+.contact-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
   min-width: 28px;
   width: auto;
   height: 22px;
@@ -231,6 +233,11 @@ a:focus-visible {
   background: var(--surface);
   font-size: 0.68rem;
   font-weight: 800;
+}
+
+.contact-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .content {
@@ -454,9 +461,10 @@ p.publication__title {
           <p class="motto">LLM Agents, Alignment, and Agentic RL.</p>
         </div>
         <ul class="contact-list" aria-label="Contact and profile links">
-          <li><span aria-hidden="true">LOC</span>Guangdong, China</li>
-          <li><a href="mailto:mdeng974@connect.hkust-gz.edu.cn"><span aria-hidden="true">@</span>Email</a></li>
-          <li><span aria-hidden="true">LANG</span>Chinese, English, Cantonese</li>
+          <li><span class="contact-badge" aria-hidden="true">LOC</span><span class="contact-value">Guangdong, China</span></li>
+          <li><a href="mailto:mdeng974@connect.hkust-gz.edu.cn"><span class="contact-badge" aria-hidden="true">@</span><span class="contact-value">mdeng974@connect.hkust-gz.edu.cn</span></a></li>
+          <li><a href="https://scholar.google.com/citations?user=XFKkTKkAAAAJ&hl=en" target="_blank" rel="noreferrer"><span class="contact-badge" aria-hidden="true">SCH</span><span class="contact-value">Google Scholar</span></a></li>
+          <li><span class="contact-badge" aria-hidden="true">LANG</span><span class="contact-value">Chinese, English, Cantonese</span></li>
         </ul>
       </aside>
 
@@ -591,7 +599,7 @@ p.publication__title {
 
     <footer class="site-footer">
       <span>Mengyi Deng</span>
-      <a href="mailto:mdeng974@connect.hkust-gz.edu.cn">Contact</a>
+      <a href="mailto:mdeng974@connect.hkust-gz.edu.cn">mdeng974@connect.hkust-gz.edu.cn</a>
     </footer>
   </body>
 </html>
